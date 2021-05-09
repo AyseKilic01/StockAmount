@@ -34,7 +34,7 @@
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.txtAmountHDD = new System.Windows.Forms.TextBox();
-            this.btnAmountGsm = new System.Windows.Forms.TextBox();
+            this.txtGsm = new System.Windows.Forms.TextBox();
             this.btnSellGsm = new DevExpress.XtraEditors.SimpleButton();
             this.btnSellHDD = new DevExpress.XtraEditors.SimpleButton();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
@@ -89,14 +89,14 @@
             this.txtAmountHDD.Size = new System.Drawing.Size(188, 27);
             this.txtAmountHDD.TabIndex = 4;
             // 
-            // btnAmountGsm
+            // txtGsm
             // 
-            this.btnAmountGsm.Enabled = false;
-            this.btnAmountGsm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAmountGsm.Location = new System.Drawing.Point(202, 96);
-            this.btnAmountGsm.Name = "btnAmountGsm";
-            this.btnAmountGsm.Size = new System.Drawing.Size(188, 27);
-            this.btnAmountGsm.TabIndex = 5;
+            this.txtGsm.Enabled = false;
+            this.txtGsm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtGsm.Location = new System.Drawing.Point(202, 96);
+            this.txtGsm.Name = "txtGsm";
+            this.txtGsm.Size = new System.Drawing.Size(188, 27);
+            this.txtGsm.TabIndex = 5;
             // 
             // btnSellGsm
             // 
@@ -105,6 +105,7 @@
             this.btnSellGsm.Size = new System.Drawing.Size(135, 29);
             this.btnSellGsm.TabIndex = 6;
             this.btnSellGsm.Text = "Sell Gsm";
+            this.btnSellGsm.Click += new System.EventHandler(this.btnSellGsm_Click);
             // 
             // btnSellHDD
             // 
@@ -113,6 +114,7 @@
             this.btnSellHDD.Size = new System.Drawing.Size(135, 29);
             this.btnSellHDD.TabIndex = 7;
             this.btnSellHDD.Text = "Sell HardDisk";
+            this.btnSellHDD.Click += new System.EventHandler(this.btnSellHDD_Click);
             // 
             // labelControl5
             // 
@@ -133,7 +135,7 @@
             this.Controls.Add(this.labelControl5);
             this.Controls.Add(this.btnSellHDD);
             this.Controls.Add(this.btnSellGsm);
-            this.Controls.Add(this.btnAmountGsm);
+            this.Controls.Add(this.txtGsm);
             this.Controls.Add(this.txtAmountHDD);
             this.Controls.Add(this.labelControl4);
             this.Controls.Add(this.labelControl3);
@@ -143,6 +145,7 @@
             this.Name = "FrmMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock Control";
+            this.Load += new System.EventHandler(this.FrmMain_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,7 +158,7 @@
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private System.Windows.Forms.TextBox txtAmountHDD;
-        private System.Windows.Forms.TextBox btnAmountGsm;
+        private System.Windows.Forms.TextBox txtGsm;
         private DevExpress.XtraEditors.SimpleButton btnSellGsm;
         private DevExpress.XtraEditors.SimpleButton btnSellHDD;
         private DevExpress.XtraEditors.LabelControl labelControl5;
